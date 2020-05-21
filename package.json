@@ -1,0 +1,24 @@
+{
+  "name": "Kitt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Circles-with-waffles/kitt.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Circles-with-waffles/kitt/issues"
+  },
+  "homepage": "https://github.com/Circles-with-waffles/kitt#readme",
+  "dependencies": {
+    "discord.js": "^12.2.0"
+  }
+}
