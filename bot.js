@@ -11,7 +11,7 @@ client.on('ready', () => {
 client.on('message', message => {
     if(message.author.bot) return;
     if(message.content.toLowerCase() === 'k!help') {
-    return message.author.send('Prefix: k!\n 1. k!createpoll to start creating the poll.\n 2. k!done when you are done typing the options for the poll.\n 3. k!stopvote to stop the vote early, default time for the bot to stop voting is 24hrs.\n  I AM WORKING ON SOME NEW COMMANDS TOO, THEY WILL BE HERE SOON!\n Support Server: https://discord.gg/WFRvE5Z');
+    return message.author.send('Prefix: k!\n 1. k!createpoll to start creating the poll.\n 2. k!done when you are done typing the options for the poll.\n 3. k!stopvote to stop the vote early, default time for the bot to stop voting is 24hrs.\n  I AM WORKING ON SOME NEW COMMANDS TOO, THEY WILL BE HERE SOON!\n Support Server: https://discord.gg/CG9wE4H');
     };
 });
 
