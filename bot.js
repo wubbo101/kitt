@@ -2,7 +2,7 @@ const discord = require('discord.js');
 const client = new discord.Client();
 const userCreatedPolls = new Map();
 
-client.login('NzEwMDI4MzMxMDIxNzYyNTgw.XsEmuA.8EODo_NQ8y09A18tdx71_MdN2T4');
+client.login('NzEwMDI4MzMxMDIxNzYyNTgw.XsjPTw.LYj-3PRfYwDoWEyYW54CTAmAPsg');
 client.on('ready', () => console.log(client.user.tag + " has logged in."));
 
 client.on('message', async message => {
