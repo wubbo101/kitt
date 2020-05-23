@@ -3,7 +3,17 @@ const client = new discord.Client();
 const userCreatedPolls = new Map();
 
 client.login('NzEwMDI4MzMxMDIxNzYyNTgw.XsjPTw.LYj-3PRfYwDoWEyYW54CTAmAPsg');
-client.on('ready', () => console.log(client.user.tag + " has logged in."));
+client.on('ready', () => {
+    console.log(client.user.tag + " has logged in.");
+    client.user.setActivity('Prefix: k!; Type k!help to know the commands.');
+});
+
+client.on('message', message => {
+    if(message.author.bot) return;
+    if(message.content.toLowerCase() === 'k!help') {
+    return message.author.send('Prefix: k!\n 1. k!createpoll to start creating the poll.\n 2. k!done when you are done typing the options for the poll.\n 3. k!stopvote to stop the vote early, default time for the bot to stop voting is 24hrs.\n  I AM WORKING ON SOME NEW COMMANDS TOO, THEY WILL BE HERE SOON!\n Support Server: https://discord.gg/WFRvE5Z');
+    };
+});
 
 client.on('message', async message => {
     if(message.author.bot) return;
@@ -12,7 +22,7 @@ client.on('message', async message => {
             message.channel.send("You already have a poll going on right now.");
             return;
         }
-        message.channel.send("Enter options. Max 10. Type k!done when finished.");
+        message.channel.send("Enter options. Max 20. Type k!done when finished.");
         let filter = m => {
             if(m.author.id === message.author.id) {
                 if(m.content.toLowerCase() === 'k!done') collector.stop();
@@ -20,7 +30,7 @@ client.on('message', async message => {
             }
             else return false;
         }
-        let collector = message.channel.createMessageCollector(filter, { maxMatches: 10 });
+        let collector = message.channel.createMessageCollector(filter, { maxMatches: 20 });
         let pollOptions = await getPollOptions(collector);
         if(pollOptions.length < 2) {
             message.channel.send("Not enough options, must contain 2!");
