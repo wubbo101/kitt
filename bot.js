@@ -1,6 +1,7 @@
 const discord = require('discord.js');
 const client = new discord.Client();
 const userCreatedPolls = new Map();
+const { Client, MessageEmbed } = require('discord.js');
 
 client.login('NzEwMDI4MzMxMDIxNzYyNTgw.XsjPTw.LYj-3PRfYwDoWEyYW54CTAmAPsg');
 client.on('ready', () => {
@@ -10,9 +11,20 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if(message.author.bot) return;
+
     if(message.content.toLowerCase() === 'k!help') {
-    return message.author.send('Prefix: k!\n 1. k!createpoll to start creating the poll.\n 2. k!done when you are done typing the options for the poll.\n 3. k!stopvote to stop the vote early, default time for the bot to stop voting is 24hrs.\n  I AM WORKING ON SOME NEW COMMANDS TOO, THEY WILL BE HERE SOON!\n Support Server: https://discord.gg/CG9wE4H');
-    };
+        const embed = new MessageEmbed()
+        .setTitle('Commnads')
+        .setColor(0x677FF7)
+        .setDescription('Help command triggered')
+        .addFields(
+            {name: 'k!createpoll', value: 'This starts the polling process.'},
+            {name: 'k!done', value: 'type this command to stop the bot from taking any more poll options.'},
+            {name: 'k!stopvote', value: 'This command stops the pol process early, default time period for the poll to stop is 24 hrs.'},
+        )
+        .setFooter('Kitt poll bot.');
+    return message.author.send(embed)    
+   };
 });
 
 client.on('message', async message => {
