@@ -13,6 +13,7 @@ client.on('message', message => {
     if(message.author.bot) return;
 
     if(message.content.toLowerCase() === 'k!help') {
+        message.react('315009125694177281');
         const embed = new MessageEmbed()
         .setTitle('Commnads')
         .setColor(0x677FF7)
@@ -24,7 +25,6 @@ client.on('message', message => {
         )
         .setFooter('Kitt poll bot.');
     return message.author.send(embed);
-    message.react('315009125694177281');
    };
 });
 
