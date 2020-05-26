@@ -19,11 +19,11 @@ client.on('message', message => {
         .setDescription('Help command triggered')
         .addFields(
             {name: 'k!createpoll', value: 'This starts the polling process.'},
-            {name: 'k!done', value: 'type this command to stop the bot from taking any more poll options.'},
-            {name: 'k!stopvote', value: 'This command stops the pol process early, default time period for the poll to stop is 24 hrs.'},
+            {name: 'k!done', value: 'Type this command to stop the bot from taking any more poll options.'},
+            {name: 'k!stopvote', value: 'This command stops the poll process early, default time period for the poll to stop is 24 hrs.'},
         )
         .setFooter('Kitt poll bot.');
-    return message.author.send(embed)    
+    return message.author.send(embed);
    };
 });
 
