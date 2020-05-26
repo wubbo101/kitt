@@ -24,6 +24,7 @@ client.on('message', message => {
         )
         .setFooter('Kitt poll bot.');
     return message.author.send(embed);
+    message.react('315009125694177281');
    };
 });
 
