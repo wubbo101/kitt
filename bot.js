@@ -23,7 +23,7 @@ client.on('message', message => {
             {name: 'k!done', value: 'Type this command to stop the bot from taking any more poll options.'},
             {name: 'k!stopvote', value: 'This command stops the poll process early, default time period for the poll to stop is 24 hrs.'},
         )
-        .addField('Support server: https://discord.gg/CG9wE4H')
+        .addField('Support server: https://discord.gg/gX8ccjj')
         .setFooter('Kitt');
     return message.author.send(embed);
    };
