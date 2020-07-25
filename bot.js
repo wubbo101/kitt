@@ -3,7 +3,7 @@ const client = new discord.Client();
 const userCreatedPolls = new Map();
 const { Client, MessageEmbed } = require('discord.js');
 
-client.login('NzEwMDI4MzMxMDIxNzYyNTgw.XvoQsg.0w93qy_Fizo_v0SBUfHBwS6f2hY');
+client.login('NzEwMDI4MzMxMDIxNzYyNTgw.XrufaQ.vWPpqCG6EpRUOtMVzcdMSPmXFYk');
 client.on('ready', () => {
     console.log(client.user.tag + " has logged in.");
     client.user.setActivity('Prefix: k!; Type k!help to know the commands.');
